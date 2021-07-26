@@ -2,69 +2,58 @@ package simple.clever.notes.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelReader.readByte
 
 import java.util.Date;
 
-class CardData:Parcelable {
+class CardData : Parcelable {
 
-    private String id;
-    private String head;
-    private Date timeOpen;
-    private boolean favorite;
+    var id: String
+    var head: String
+    var timeOpen: Date
+    var favorite: Boolean
 
-    public CardData(String head, Date timeOpen, boolean favorite) {
-        this.head = head;
-        this.timeOpen = timeOpen;
-        this.favorite = favorite;
+    constructor(head: String, timeOpen: Date, favorite: Boolean) {
+        this.head = head
+        this.timeOpen = timeOpen
+        this.favorite = favorite
+        this.id = ""
+    }
+    constructor(in2:Parcel)
+    {
+        head = in2.readString()?:"";
+        favorite = in2.readByte()==(1 as Byte);
+        timeOpen = Date ( in2 . readLong ());
+        id=in2.readString()?:"";
     }
 
-    public String getHead() {
-        return head;
-    }
 
-    public Date getTimeOpen() {
-        return timeOpen;
-    }
 
-    public boolean isFavorite() {
-        return favorite;
-    }
-
-    @Override
-    public int describeContents() {
+    override fun describeContents(): Int {
         return 0;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
+    override fun writeToParcel(dest: Parcel, flags: Int): Unit {
         dest.writeString(head);
-        dest.writeByte((byte) (favorite ? 1 : 0));
+        dest.writeByte((if (favorite) 1 else 0) as Byte);
         dest.writeLong(timeOpen.getTime());
+        dest.writeString(id)
     }
 
-    protected CardData(Parcel in) {
-        head = in.readString();
-        favorite = in.readByte() != 0;
-        timeOpen = new Date(in.readLong());
-    }
+ companion object Creator: Parcelable.Creator<CardData>
+     {
+         override fun createFromParcel(in2:Parcel ):CardData  {
+             return  CardData ( in2);
+         }
 
-    public static final Creator<CardData> CREATOR = new Creator<CardData>() {
-        @Override
-        public CardData createFromParcel(Parcel in) {
-            return new CardData(in);
-        }
+         override fun newArray(size: Int): Array<CardData?> {
 
-        @Override
-        public CardData[] newArray(int size) {
-            return new CardData[size];
-        }
-    };
+             return arrayOfNulls(size)
+         }
+     };
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+
+
+
 }
