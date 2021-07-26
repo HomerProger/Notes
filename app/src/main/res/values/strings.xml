@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Поиск</string>
+    <string name="sort">Сортировать</string>
+    <string name="birthday">Дни рождения</string>
+    <string name="password">Пароли</string>
+    <string name="series">Сериал: последняя серия</string>
+    <string name="gta">Чит-коды для GTA</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="mail">777@gmail.com</string>
+    <string name="delete">удалить</string>
+    <string name="share">поделиться</string>
+    <string name="change">редактировать</string>
+    <string name="button_save">Сохранить</string>
+    <string name="calendar">Календарь</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="attention">Внимание!</string>
+    <string name="confirm">Вы уверены, что хотите удалить?</string>
+    <string name="change_head">Введите новое название заметки:</string>
+    <string name="sign_out">Выйти</string>
+    <string name="continue_">Продолжить</string>
+    <string name="best_note_head">Текст вашей лучшей заметки ниже!</string>
+</resources>

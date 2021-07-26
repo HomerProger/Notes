@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-firestore:23.0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0da01bd7c2ebd4152f9e2f019e9acf1f/firebase-firestore-23.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0da01bd7c2ebd4152f9e2f019e9acf1f/firebase-firestore-23.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0da01bd7c2ebd4152f9e2f019e9acf1f/firebase-firestore-23.0.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bfb8b11121c7abef0af7d97fab885e61/firebase-firestore-23.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/49b9b442a1814f2dc7a2b0b244dc0664/firebase-firestore-23.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9f7f16ef5edbc173590c3e6ecbb2618e/firebase-firestore-23.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ec756635ff891ef87079d029a40dc6f3/firebase-firestore-23.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b85b27e837856d3a4e781cdda7dc628d/firebase-firestore-23.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b85b27e837856d3a4e781cdda7dc628d/firebase-firestore-23.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b85b27e837856d3a4e781cdda7dc628d/firebase-firestore-23.0.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-firestore/23.0.2/de97d4e24c583d491779f281efa2c2e37a11328f/firebase-firestore-23.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-firestore/23.0.2/668927001d9cfece1d5918a81aa45591d4ec2f2a/firebase-firestore-23.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
