@@ -42,7 +42,7 @@ public class CardSourceFireBaseImpl implements CardSource{
                                 Map<String, Object> doc = document.getData();
                                 String id = document.getId();
                                 Log.d("myLog", id);
-                                CardData cardData = CardDataMapping.toCardData(id, doc);
+                                CardData cardData = CardDataMapping.Companion.toCardData(id, doc);
                                 Log.d("myLog", cardData.getId() + "в файр до помещения в лист");
                                 cardsData.add(cardData);
                             }
@@ -85,12 +85,12 @@ public class CardSourceFireBaseImpl implements CardSource{
     public void updateCardData(CardData cardData, int position) {
         String id = cardData.getId();
         Log.d("myLog", id + " в апдейте в файр");
-        collection.document(id).set(CardDataMapping.toDocument(cardData));
+        collection.document(id).set(CardDataMapping.Companion.toDocument(cardData));
     }
 
     @Override
     public void addCardData(final CardData cardData) {
-        collection.add(CardDataMapping.toDocument(cardData)).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        collection.add(CardDataMapping.Companion.toDocument(cardData)).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 cardData.setId(documentReference.getId());

@@ -40,20 +40,16 @@ class CardData : Parcelable {
         dest.writeString(id)
     }
 
- companion object Creator: Parcelable.Creator<CardData>
-     {
-         override fun createFromParcel(in2:Parcel ):CardData  {
-             return  CardData ( in2);
-         }
 
-         override fun newArray(size: Int): Array<CardData?> {
+    companion object CREATOR : Parcelable.Creator<CardData> {
+        override fun createFromParcel(parcel: Parcel): CardData {
+            return CardData(parcel)
+        }
 
-             return arrayOfNulls(size)
-         }
-     };
-
-
-
+        override fun newArray(size: Int): Array<CardData?> {
+            return arrayOfNulls(size)
+        }
+    }
 
 
 }
